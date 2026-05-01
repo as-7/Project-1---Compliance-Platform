@@ -66,8 +66,3 @@ scripts/        A2A client demo, ad-hoc utilities
 ```bash
 docker compose exec backend pytest
 ```
-
-## What I'd improve with more time
-
-(Filled in by the candidate.)
-# Project-1---Compliance-Platform

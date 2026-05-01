@@ -1,0 +1,379 @@
+SOC 2 — TRUST SERVICES CRITERIA (EXCERPT, ABRIDGED FOR DEMO)
+
+These excerpts are derived from publicly available descriptions of the AICPA
+Trust Services Criteria (2017 revision with 2022 updates). They have been
+condensed and paraphrased for testing the extraction pipeline and should not
+be used as authoritative compliance text. Original criteria are published
+by the AICPA at aicpa.org.
+
+================================================================================
+CC1.0 — CONTROL ENVIRONMENT
+================================================================================
+
+Control CC1.1 — Demonstrate Commitment to Integrity and Ethical Values.
+
+The entity demonstrates a commitment to integrity and ethical values. The
+board of directors and management, at all levels, demonstrate through their
+directives, actions, and behavior the importance of integrity and ethical
+values to support the functioning of the system of internal control.
+Standards of conduct are documented in a formal Code of Ethics that is
+communicated to all personnel and contractors upon engagement and annually
+thereafter. The entity has a defined, documented process to investigate
+reports of unethical behavior or violations of the Code. Investigations must
+be completed within 30 days. Remediation actions are tracked to closure.
+Adherence to the Code is evaluated during annual performance reviews for all
+employees including management.
+
+Control CC1.2 — Board Independence and Oversight.
+
+The board of directors demonstrates independence from management and
+exercises oversight of the development and performance of internal control.
+The board or a delegated committee meets at least quarterly to review the
+design and operating effectiveness of internal controls relevant to
+security, availability, processing integrity, confidentiality, and privacy.
+Meeting minutes are retained for at least five years. The board charter
+defines expectations regarding member expertise in information technology
+and cybersecurity. Board members complete a conflict-of-interest disclosure
+annually.
+
+Control CC1.3 — Organizational Structure, Reporting Lines, and Authority.
+
+Management establishes, with board oversight, structures, reporting lines,
+and appropriate authorities and responsibilities in the pursuit of
+objectives. Roles related to information security governance are documented
+in formal job descriptions. The entity designates a Chief Information
+Security Officer (CISO) or equivalent who reports to executive management
+no lower than the C-suite. The CISO charter defines authority over policy
+approval, risk acceptance, and incident escalation. Segregation of duties
+is enforced such that no single individual can both authorize and implement
+security-critical changes.
+
+Control CC1.4 — Competence and Accountability.
+
+The entity demonstrates a commitment to attract, develop, and retain
+competent individuals aligned with its objectives. Management establishes
+competency requirements for key security roles and evaluates whether
+individuals meet those requirements through skills assessments and
+certifications. Annual training budgets are allocated for the security
+function. Performance is evaluated against documented security KPIs at
+least semi-annually.
+
+Control CC1.5 — Accountability for Internal Control.
+
+The entity holds individuals accountable for their internal control
+responsibilities in the pursuit of objectives. Management communicates
+responsibility for internal controls through formal policies and operating
+procedures. The entity maintains a responsibility assignment matrix (RACI)
+for all security-critical processes, reviewed and updated at least annually.
+
+================================================================================
+CC2.0 — COMMUNICATION AND INFORMATION
+================================================================================
+
+Control CC2.1 — Internal Communication.
+
+The entity internally communicates information, including objectives and
+responsibilities for internal control, necessary to support the functioning
+of internal control. Security policies, acceptable use policies, and
+incident reporting procedures are made available to all personnel through
+the corporate intranet. New employees are required to acknowledge these
+policies during onboarding within their first five business days. Any
+material revisions to security policies are communicated to all personnel
+within 10 business days, and re-acknowledgment is required within 30 days.
+Management circulates quarterly security newsletters summarizing threat
+trends, metrics, and any policy updates.
+
+Control CC2.2 — External Communication.
+
+The entity communicates with external parties regarding matters affecting
+the functioning of internal control. The entity maintains a public-facing
+process for responsible disclosure of security vulnerabilities (e.g., a
+security.txt file and a bug bounty program). Customer-facing security
+documentation, including SOC 2 Type II reports and data processing
+agreements, is updated at least annually and made available upon request.
+Material security incidents that affect customers are communicated within
+72 hours of determination per contractual obligations and applicable
+regulations.
+
+Control CC2.3 — Communication of Deficiencies.
+
+The entity evaluates and communicates internal control deficiencies in a
+timely manner to the parties responsible for taking corrective action,
+including senior management and the board of directors, as appropriate.
+All control deficiencies identified through internal audits, penetration
+tests, or vendor assessments must be documented in the GRC tracking system
+within five business days of discovery and assigned a remediation owner
+and target date.
+
+================================================================================
+CC3.0 — RISK ASSESSMENT
+================================================================================
+
+Control CC3.1 — Specification of Objectives.
+
+The entity specifies objectives with sufficient clarity to enable the
+identification and assessment of risks relating to objectives. Security
+objectives are documented in the annual security strategy, mapped to
+business objectives, and approved by executive management. Objectives
+must be measurable and include key risk indicators (KRIs) with defined
+thresholds.
+
+Control CC3.2 — Risk Identification and Analysis.
+
+The entity identifies risks to the achievement of its objectives across the
+entity and analyzes risks as a basis for determining how the risks should
+be managed. The risk register is maintained in the GRC platform and reviewed
+quarterly. Each risk is scored on a likelihood-impact matrix (5x5 scale).
+Risk assessments consider internal and external threat intelligence feeds,
+results from vulnerability scans, and regulatory changes. The annual
+enterprise risk assessment includes input from engineering, legal, HR, and
+the security team.
+
+Control CC3.3 — Consideration of Fraud Risks.
+
+The entity considers the potential for fraud in assessing risks to the
+achievement of objectives. The fraud risk assessment covers unauthorized
+access to data, manipulation of financial records, misuse of company
+resources, and social engineering threats. Anti-fraud controls include
+segregation of duties, transaction monitoring, and whistleblower hotlines.
+
+Control CC3.4 — Identification and Assessment of Significant Change.
+
+The entity identifies and assesses changes that could significantly impact
+the system of internal control. Significant changes include mergers and
+acquisitions, major infrastructure migrations, adoption of new technologies,
+significant regulatory changes, and material changes to the vendor
+portfolio. A change impact assessment process is triggered for any event
+meeting defined significance thresholds.
+
+================================================================================
+CC4.0 — MONITORING ACTIVITIES
+================================================================================
+
+Control CC4.1 — Ongoing and Separate Evaluations.
+
+The entity selects, develops, and performs ongoing and/or separate
+evaluations to ascertain whether the components of internal control are
+present and functioning. Continuous monitoring includes automated
+configuration compliance scans (daily), security information and event
+management (SIEM) alerting (real-time), and application security scanning
+in CI/CD pipelines (per build). Separate evaluations include an annual
+SOC 2 Type II audit, annual penetration testing by an independent firm,
+and quarterly internal control testing by the compliance team.
+
+Control CC4.2 — Communication of Deficiencies.
+
+The entity evaluates and communicates internal control deficiencies in a
+timely manner to those parties responsible for taking corrective action.
+Critical findings from audits or assessments are escalated to the CISO
+within 24 hours and to the board within five business days. A formal
+corrective action plan (CAP) is required within 30 days for all high
+and critical findings.
+
+================================================================================
+CC5.0 — CONTROL ACTIVITIES
+================================================================================
+
+Control CC5.1 — Selection and Development of Control Activities.
+
+The entity selects and develops control activities that contribute to the
+mitigation of risks to the achievement of objectives to acceptable levels.
+Control design follows a defense-in-depth approach, layering preventive,
+detective, and corrective controls. Each control is mapped to one or more
+risks in the risk register.
+
+Control CC5.2 — Selection and Development of Technology Controls.
+
+The entity also selects and develops general control activities over
+technology to support the achievement of objectives. Technology controls
+include access management, change management, operations management, and
+security monitoring. These controls are documented in the IT General
+Controls (ITGC) matrix and tested at least annually.
+
+Control CC5.3 — Deployment Through Policies and Procedures.
+
+The entity deploys control activities through policies that establish what
+is expected and procedures that put policies into action. All policies
+are maintained in a centralized policy management system. Policies have a
+defined owner, review cycle (at least annual), and approval authority.
+Procedures include step-by-step instructions and are version-controlled.
+
+================================================================================
+CC6.0 — LOGICAL AND PHYSICAL ACCESS CONTROLS
+================================================================================
+
+Control CC6.1 — Logical Access — Identification and Authentication.
+
+Logical access to information assets is restricted through identification
+and authentication controls. Multi-factor authentication (MFA) is required
+for all administrative access to production systems, for remote access to
+internal networks via VPN, and for access to cloud management consoles.
+Passwords must meet minimum complexity requirements: 14+ characters with a
+mix of upper, lower, numeric, and special characters. Passwords expire
+every 90 days for standard accounts; service accounts use certificate-based
+or key-based authentication. Failed login attempts trigger account lockout
+after five consecutive failures with a 30-minute lockout period.
+
+Control CC6.2 — Logical Access — Authorization and Provisioning.
+
+Prior to issuing system credentials and granting system access, the entity
+registers and authorizes new internal and external users whose access is
+administered by the entity. Access is provisioned based on the principle
+of least privilege using role-based access control (RBAC). Access requests
+require manager approval and, for privileged roles, CISO approval. New
+user provisioning is automated through the identity provider. Access is
+reviewed quarterly by system owners; orphaned accounts are disabled within
+48 hours of detection.
+
+Control CC6.3 — Logical Access — Removal of Access.
+
+The entity removes credentials and access rights for terminated employees
+and contractors promptly. Standard user access is revoked within 24 hours
+of separation. Privileged access is revoked immediately upon notification.
+Shared or generic credentials are rotated within 24 hours after departure
+of any user who had knowledge of them. Automated workflows between the
+HRIS and identity provider ensure timely de-provisioning.
+
+Control CC6.4 — Physical Access Controls.
+
+The entity restricts physical access to facilities and protected
+information assets to authorized personnel. Data center access requires
+badge plus biometric verification. Visitor access requires escort and is
+logged. Physical access logs are retained for 12 months and reviewed
+quarterly for anomalies.
+
+Control CC6.5 — Disposal of Assets.
+
+The entity disposes of information assets in a manner that ensures
+confidentiality. Storage media containing sensitive data are sanitized
+using NIST SP 800-88 guidelines (purge or destroy) prior to disposal.
+Certificates of destruction are retained for each disposed asset.
+
+Control CC6.6 — Encryption in Transit.
+
+The entity protects information assets during transmission over public
+and internal networks through the use of encryption. TLS 1.2 or higher
+is required for all external-facing services. Internal service-to-service
+communication uses mutual TLS (mTLS) where feasible. SSH connections are
+restricted to key-based authentication with a minimum key length of 2048
+bits. Certificates are managed through automated certificate lifecycle
+management and rotated before expiry.
+
+Control CC6.7 — Encryption at Rest.
+
+The entity protects information assets stored on physical media and in
+electronic storage through encryption. All databases, file systems, and
+object storage containing sensitive or regulated data are encrypted at
+rest using AES-256 or equivalent. Encryption keys are managed through a
+cloud Key Management Service (KMS) or a dedicated Hardware Security
+Module (HSM). Key rotation occurs at least annually and immediately
+after any suspected compromise. Key access is restricted to a minimum
+number of custodians with split-knowledge procedures.
+
+Control CC6.8 — Protection Against Malware.
+
+The entity implements controls to prevent or detect and act upon the
+introduction of unauthorized or malicious software. Endpoint detection
+and response (EDR) agents are deployed on all corporate endpoints and
+servers. Definitions and behavioral models are updated at least daily.
+Email security gateways inspect all inbound messages for malicious
+attachments and URLs.
+
+================================================================================
+CC7.0 — SYSTEM OPERATIONS
+================================================================================
+
+Control CC7.1 — Vulnerability Management.
+
+The entity uses detection and monitoring procedures to identify changes
+to configurations that result in the introduction of new vulnerabilities
+and susceptibility to newly discovered vulnerabilities. Vulnerability
+scanning is performed weekly for internet-facing assets and monthly for
+internal assets. Container images are scanned before deployment. Critical
+vulnerabilities (CVSS >= 9.0) must be remediated within 15 days of
+discovery; high (CVSS 7.0-8.9) within 30 days; medium (CVSS 4.0-6.9)
+within 90 days; low within the next planned release cycle. Exceptions
+require documented risk acceptance by the CISO.
+
+Control CC7.2 — Security Event Detection and Monitoring.
+
+The entity monitors system components and anomalies that are indicative
+of malicious acts, natural disasters, and errors affecting the entity's
+ability to meet its objectives; anomalies are analyzed to determine
+whether they represent security events. Logs from all production systems
+are aggregated in a centralized SIEM. Detection rules cover at least:
+brute-force login attempts, privilege escalation, data exfiltration
+indicators, configuration changes, and malware indicators. Alerts are
+triaged by the SOC with a target response time of 15 minutes for
+critical alerts and 1 hour for high alerts. Logs are retained for at
+least 12 months online and 24 months in cold storage.
+
+Control CC7.3 — Incident Response.
+
+The entity evaluates security events to determine whether they could or
+have resulted in a failure of the entity to meet its objectives (security
+incidents) and, if so, takes actions to prevent or address such failures.
+The incident response plan defines severity levels (P1-P4) with escalation
+timelines. P1 incidents require executive notification within 1 hour.
+Post-incident reviews are conducted within five business days of closure.
+Root cause analysis is documented and remediation actions are tracked.
+Incident response procedures are tested at least annually via tabletop
+exercises or full simulations. Lessons learned are incorporated into
+the incident response plan and communicated to the organization.
+
+Control CC7.4 — Disaster Recovery and Business Continuity.
+
+The entity tests recovery plan procedures supporting system recovery to
+meet its objectives. Recovery Time Objectives (RTO) and Recovery Point
+Objectives (RPO) are documented for each critical system. Backup integrity
+is verified through automated restore tests at least monthly. Full DR
+failover exercises are conducted at least annually, with results documented
+and reported to management. Business impact analyses are reviewed annually
+and updated whenever significant changes occur to the technology
+environment.
+
+Control CC7.5 — Change Management.
+
+The entity authorizes, designs, develops or acquires, configures,
+documents, tests, approves, and implements changes to infrastructure,
+data, software, and procedures to meet its objectives. All changes to
+production systems follow a documented change management process that
+includes: change request, impact assessment, peer review, testing in a
+non-production environment, approval (at least one reviewer who is not
+the author), implementation, and post-deployment verification.
+Emergency changes require retrospective documentation within 48 hours.
+The change advisory board (CAB) reviews all high-risk changes prior to
+implementation.
+
+================================================================================
+CC8.0 — CHANGE MANAGEMENT (SUPPLEMENTAL)
+================================================================================
+
+Control CC8.1 — Design and Development Controls.
+
+Changes to system components are authorized, designed, developed,
+configured, documented, tested, approved, and implemented to meet the
+entity's objectives. The SDLC includes requirements gathering, design
+review, secure coding standards, automated unit and integration testing,
+static application security testing (SAST), and dynamic application
+security testing (DAST). Code coverage thresholds are enforced in CI.
+
+================================================================================
+CC9.0 — RISK MITIGATION
+================================================================================
+
+Control CC9.1 — Risk Mitigation Through Internal Controls.
+
+The entity identifies, selects, and develops risk mitigation activities
+for risks arising from potential business disruptions. Business continuity
+plans address loss of key personnel, supply chain disruptions, and
+extended cloud provider outages. Plans are tested and updated annually.
+
+Control CC9.2 — Vendor Risk Management.
+
+The entity assesses and manages risks associated with vendors and business
+partners that could affect the achievement of its objectives. Critical
+vendors undergo an annual security assessment that includes SOC 2 report
+review, questionnaire-based evaluation, and (for the highest tier)
+on-site audit. Vendor contracts include data protection clauses, right
+to audit, and incident notification requirements (72-hour SLA).

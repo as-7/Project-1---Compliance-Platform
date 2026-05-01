@@ -1,0 +1,320 @@
+GDPR — GENERAL DATA PROTECTION REGULATION (EXCERPT, ABRIDGED FOR DEMO)
+
+These excerpts paraphrase publicly available articles of Regulation (EU)
+2016/679 (General Data Protection Regulation). They have been condensed
+and reorganized for testing the extraction pipeline and should not be used
+as authoritative legal text. The official text is published in the Official
+Journal of the European Union.
+
+================================================================================
+CHAPTER II — PRINCIPLES
+================================================================================
+
+Article 5 — Principles relating to processing of personal data.
+
+Section 5.1 — Lawfulness, Fairness, and Transparency.
+
+Personal data shall be processed lawfully, fairly and in a transparent
+manner in relation to the data subject. The controller must identify and
+document the lawful basis for each processing activity under Article 6
+before processing begins. Where consent is relied upon, the controller
+must be able to demonstrate that the data subject has consented. Consent
+must be freely given, specific, informed, and unambiguous. The controller
+shall provide clear and plain language notices to data subjects about how
+their data is processed, who processes it, for what purpose, and for how
+long it is retained. Privacy notices must be easily accessible and updated
+whenever processing activities change materially. Transparency obligations
+extend to automated decision-making, including profiling: the data subject
+has the right to be informed about the existence of automated decision-
+making, its significance, and the logic involved.
+
+Section 5.2 — Purpose Limitation.
+
+Personal data shall be collected for specified, explicit and legitimate
+purposes and not further processed in a manner that is incompatible with
+those purposes. The controller shall document each purpose in the Record
+of Processing Activities (RoPA) before data collection begins. Further
+processing for archiving purposes in the public interest, scientific or
+historical research purposes, or statistical purposes is not considered
+incompatible with the initial purposes, provided appropriate safeguards
+are in place (pseudonymization, data minimization). Any new purpose not
+originally specified requires a new lawful basis or explicit consent from
+the data subject.
+
+Section 5.3 — Data Minimization.
+
+Personal data shall be adequate, relevant and limited to what is necessary
+in relation to the purposes for which they are processed. Controllers must
+conduct a necessity assessment for each data field collected. Forms and
+user interfaces shall be designed to collect only the minimum data required.
+Optional data fields must be clearly marked as optional. Periodic reviews
+(at least annually) shall be conducted to identify and remove data fields
+that are no longer necessary. When data is used for analytics or testing,
+pseudonymization or anonymization techniques shall be applied wherever
+feasible.
+
+Section 5.4 — Accuracy.
+
+Personal data shall be accurate and, where necessary, kept up to date.
+Every reasonable step must be taken to ensure that personal data that are
+inaccurate, having regard to the purposes for which they are processed,
+are erased or rectified without delay. Controllers shall implement
+mechanisms allowing data subjects to update their personal data directly
+(e.g., self-service portals). Automated data quality checks shall flag
+potential inaccuracies. Third-party data must be validated at the point
+of ingestion.
+
+Section 5.5 — Storage Limitation and Retention.
+
+Personal data shall be kept in a form which permits identification of data
+subjects for no longer than is necessary for the purposes for which the
+personal data are processed. Retention schedules must be documented for
+each category of personal data, specifying the retention period and the
+criteria used to determine it. Retention policies must be reviewed at
+least annually by the Data Protection Officer (DPO). When the retention
+period expires, personal data must be securely deleted or anonymized
+within 90 days. Backup systems must also purge expired personal data
+within a reasonable period, not to exceed 180 days. Archival for legal
+hold takes precedence but must be narrowly scoped.
+
+Section 5.6 — Integrity and Confidentiality.
+
+Personal data shall be processed in a manner that ensures appropriate
+security of the personal data, including protection against unauthorized
+or unlawful processing and against accidental loss, destruction or damage,
+using appropriate technical or organizational measures. Technical measures
+include encryption of personal data at rest and in transit, access controls
+based on the principle of least privilege, network segmentation, and
+intrusion detection systems. Organizational measures include security
+awareness training, background checks for personnel handling sensitive
+data, and documented security incident response procedures. The
+appropriateness of measures shall be assessed through regular risk
+assessments and penetration testing.
+
+================================================================================
+CHAPTER III — RIGHTS OF THE DATA SUBJECT
+================================================================================
+
+Article 12 — Transparent information, communication and modalities.
+
+The controller shall take appropriate measures to provide any information
+referred to in Articles 13 and 14 and any communication under Articles 15
+to 22 and 34 relating to processing to the data subject in a concise,
+transparent, intelligible and easily accessible form, using clear and
+plain language. Information shall be provided in writing, or by other
+means including, where appropriate, by electronic means. The controller
+shall facilitate the exercise of data subject rights and shall respond
+to requests without undue delay and in any event within one month of
+receipt. That period may be extended by two further months where necessary,
+taking into account the complexity and number of the requests.
+
+Article 13 — Information to be provided where personal data are collected
+from the data subject.
+
+Where personal data relating to a data subject are collected from the data
+subject, the controller shall, at the time when personal data are obtained,
+provide the data subject with the following information: (a) the identity
+and contact details of the controller; (b) the contact details of the DPO;
+(c) the purposes and lawful basis for processing; (d) the recipients or
+categories of recipients; (e) details of transfers to third countries;
+(f) the retention period or criteria to determine it; (g) the existence
+of data subject rights (access, rectification, erasure, restriction,
+portability, objection); (h) the right to withdraw consent at any time;
+(i) the right to lodge a complaint with a supervisory authority; (j) whether
+the provision of data is a statutory or contractual requirement; (k) the
+existence of automated decision-making, including profiling.
+
+Article 15 — Right of access by the data subject.
+
+The data subject shall have the right to obtain from the controller
+confirmation as to whether or not personal data concerning him or her are
+being processed, and, where that is the case, access to the personal data
+and the following information: the purposes of processing, categories of
+data, recipients, retention periods, the existence of data subject rights,
+the right to lodge a complaint, source of data (if not collected directly),
+and the existence of automated decision-making. The controller shall
+provide a copy of the personal data undergoing processing in a commonly
+used electronic format. The first copy is provided free of charge.
+
+Article 17 — Right to erasure ('right to be forgotten').
+
+The data subject shall have the right to obtain from the controller the
+erasure of personal data concerning him or her without undue delay, and
+the controller shall have the obligation to erase personal data without
+undue delay where: (a) the data are no longer necessary for the purposes;
+(b) the data subject withdraws consent and there is no other legal ground;
+(c) the data subject objects to the processing; (d) the data have been
+unlawfully processed; (e) erasure is required by Union or Member State law;
+(f) the data were collected in relation to the offer of information society
+services to a child. Erasure requests must be acknowledged within 72 hours
+and the controller must verify the identity of the requester. The erasure
+must be completed within 30 days. Where the controller has made the data
+public, it shall take reasonable steps to inform other controllers
+processing those data that the data subject has requested erasure.
+
+Article 20 — Right to data portability.
+
+The data subject shall have the right to receive the personal data
+concerning him or her, which he or she has provided to a controller, in a
+structured, commonly used and machine-readable format and have the right
+to transmit those data to another controller without hindrance. The
+controller shall make the data available in JSON, CSV, or XML format.
+Where technically feasible, the data subject has the right to have
+personal data transmitted directly from one controller to another.
+
+================================================================================
+CHAPTER IV — CONTROLLER AND PROCESSOR
+================================================================================
+
+Article 24 — Responsibility of the controller.
+
+Taking into account the nature, scope, context and purposes of processing
+as well as the risks of varying likelihood and severity for the rights and
+freedoms of natural persons, the controller shall implement appropriate
+technical and organisational measures to ensure and to be able to
+demonstrate that processing is performed in accordance with this
+Regulation. Those measures shall be reviewed and updated where necessary.
+The controller shall implement data protection policies and be able to
+demonstrate compliance upon request from the supervisory authority.
+
+Article 25 — Data protection by design and by default.
+
+Taking into account the state of the art, the cost of implementation and
+the nature, scope, context and purposes of processing, the controller
+shall, both at the time of the determination of the means for processing
+and at the time of the processing itself, implement appropriate technical
+and organisational measures designed to implement data-protection
+principles (such as data minimization) in an effective manner and to
+integrate the necessary safeguards into the processing. By default, only
+personal data which are necessary for each specific purpose shall be
+processed. Default settings shall not allow personal data to be made
+accessible without the individual's intervention to an indefinite number
+of natural persons. Privacy by design reviews must be incorporated into
+the SDLC. All new features or services processing personal data must pass
+a privacy design review before launch.
+
+Article 28 — Processor.
+
+Where processing is to be carried out on behalf of a controller, the
+controller shall use only processors providing sufficient guarantees to
+implement appropriate technical and organisational measures. Processing
+by a processor shall be governed by a contract (Data Processing Agreement)
+that sets out: the subject-matter and duration of processing, the nature
+and purpose, the type of personal data, the categories of data subjects,
+and the obligations of the processor. The processor shall not engage
+another sub-processor without prior specific or general written
+authorization from the controller. The processor must assist the
+controller in ensuring compliance with data subject rights and security
+obligations.
+
+Article 30 — Records of processing activities.
+
+Each controller and, where applicable, the controller's representative,
+shall maintain a record of processing activities under its responsibility.
+That record shall contain: (a) the name and contact details of the
+controller and DPO; (b) the purposes of the processing; (c) a description
+of the categories of data subjects and of the categories of personal data;
+(d) the categories of recipients, including recipients in third countries;
+(e) transfers of personal data to a third country, including documentation
+of suitable safeguards; (f) the envisaged time limits for erasure of the
+different categories of data; (g) a general description of the technical
+and organisational security measures. The records shall be maintained in
+writing, including in electronic form. Records shall be made available to
+the supervisory authority on request. The RoPA must be reviewed and
+updated at least quarterly or whenever a new processing activity is
+introduced.
+
+Article 32 — Security of processing.
+
+Taking into account the state of the art, the costs of implementation and
+the nature, scope, context and purposes of processing as well as the risk
+of varying likelihood and severity for the rights and freedoms of natural
+persons, the controller and the processor shall implement appropriate
+technical and organisational measures to ensure a level of security
+appropriate to the risk, including as appropriate: (a) the pseudonymisation
+and encryption of personal data; (b) the ability to ensure the ongoing
+confidentiality, integrity, availability and resilience of processing
+systems and services; (c) the ability to restore the availability and
+access to personal data in a timely manner in the event of a physical or
+technical incident; (d) a process for regularly testing, assessing and
+evaluating the effectiveness of technical and organisational measures for
+ensuring the security of the processing. In assessing the appropriate
+level of security, account shall be taken of the risks presented by
+processing, including accidental or unlawful destruction, loss, alteration,
+unauthorised disclosure of, or access to personal data. The controller
+and processor shall take steps to ensure that any natural person acting
+under their authority who has access to personal data does not process
+them except on instructions from the controller. Security measures must
+be documented and evidence of testing must be retained for audit.
+
+Article 33 — Notification of a personal data breach to the supervisory
+authority.
+
+In the case of a personal data breach, the controller shall without undue
+delay and, where feasible, not later than 72 hours after having become
+aware of it, notify the personal data breach to the competent supervisory
+authority, unless the personal data breach is unlikely to result in a risk
+to the rights and freedoms of natural persons. Where notification is not
+made within 72 hours, it shall be accompanied by reasons for the delay.
+The notification shall contain: (a) the nature of the breach including
+categories and approximate number of data subjects and records concerned;
+(b) the name and contact details of the DPO; (c) the likely consequences
+of the breach; (d) the measures taken or proposed to address the breach
+and mitigate its effects. The controller shall document all breaches,
+including facts, effects, and remedial action taken, regardless of whether
+the supervisory authority was notified.
+
+Article 34 — Communication of a personal data breach to the data subject.
+
+When the personal data breach is likely to result in a high risk to the
+rights and freedoms of natural persons, the controller shall communicate
+the breach to the data subject without undue delay. The communication
+shall describe in clear and plain language the nature of the breach and
+contain at least the information and measures referred to in Article 33.
+
+Article 35 — Data protection impact assessment.
+
+Where a type of processing in particular using new technologies, and
+taking into account the nature, scope, context and purposes of the
+processing, is likely to result in a high risk to the rights and freedoms
+of natural persons, the controller shall, prior to the processing, carry
+out an assessment of the impact of the envisaged processing operations on
+the protection of personal data. A DPIA is required at minimum when:
+(a) systematic and extensive profiling with significant effects is
+involved; (b) processing on a large scale of special categories of data
+or criminal convictions data occurs; (c) systematic monitoring of a
+publicly accessible area on a large scale is conducted. The DPIA shall
+contain: a systematic description of the processing operations, assessment
+of necessity and proportionality, assessment of risks to data subjects,
+and measures to address those risks. DPIAs must be reviewed when the
+nature, scope, context, or purposes of the processing change materially.
+The DPO must be consulted during the DPIA process.
+
+Article 37 — Designation of the data protection officer.
+
+The controller and the processor shall designate a data protection officer
+in any case where: (a) processing is carried out by a public authority or
+body; (b) the core activities consist of processing operations which, by
+virtue of their nature, scope and/or purposes, require regular and
+systematic monitoring of data subjects on a large scale; (c) the core
+activities consist of processing on a large scale of special categories
+of data. The DPO shall be designated on the basis of professional
+qualities and expert knowledge of data protection law and practices. The
+DPO may be a staff member or engaged through a service contract. The
+DPO shall be provided with resources necessary to carry out tasks and
+maintain expert knowledge. The DPO shall report directly to the highest
+level of management. The controller and processor shall ensure that the
+DPO is involved properly and in a timely manner in all issues relating
+to the protection of personal data.
+
+Article 44 — General principle for transfers to third countries.
+
+Any transfer of personal data which are undergoing processing or are
+intended for processing after transfer to a third country or to an
+international organisation shall take place only if the conditions laid
+down in this Chapter are complied with. All provisions of this Regulation
+shall be respected in order to ensure that the level of protection of
+natural persons guaranteed by this Regulation is not undermined. Transfers
+may occur on the basis of an adequacy decision, appropriate safeguards
+(e.g., standard contractual clauses, binding corporate rules), or
+derogations for specific situations.

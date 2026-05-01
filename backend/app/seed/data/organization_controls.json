@@ -1,0 +1,177 @@
+[
+  {
+    "code": "ORG-AC-01",
+    "title": "Multi-factor authentication for production access",
+    "description": "All administrative access to production systems requires hardware-token or TOTP-based multi-factor authentication. Enforced via SSO with conditional access policies. MFA is also required for VPN access and cloud management consoles. Emergency break-glass accounts are stored in a hardware vault with dual-custodian access.",
+    "risk_domain": "Access Control",
+    "owner": "Platform Security"
+  },
+  {
+    "code": "ORG-AC-02",
+    "title": "Quarterly user access review",
+    "description": "Owners of each production system review the list of users with access every quarter. Stale or excessive permissions are identified and revoked within 48 hours of review. Review evidence is retained in the GRC platform for audit. Orphaned accounts are automatically disabled after 30 days of inactivity.",
+    "risk_domain": "Access Control",
+    "owner": "Compliance"
+  },
+  {
+    "code": "ORG-AC-03",
+    "title": "Termination access revocation runbook",
+    "description": "On HR-triggered termination, an automated workflow revokes SSO access within 1 hour and full system credentials within 24 hours. Privileged users are revoked immediately. Company-owned devices are recovered by IT within 48 hours. Shared credentials known to the departing user are rotated within 24 hours. The revocation is verified by automated audit within 72 hours.",
+    "risk_domain": "Access Control",
+    "owner": "IT Operations"
+  },
+  {
+    "code": "ORG-AC-04",
+    "title": "Least-privilege provisioning via RBAC",
+    "description": "New user access is granted via role-based provisioning. Roles are defined in the identity provider and mapped to application permissions. New roles require security review before they are added to the catalog. Access requests require manager approval and, for privileged access, CISO sign-off. Just-in-time (JIT) access is implemented for sensitive production environments.",
+    "risk_domain": "Access Control",
+    "owner": "IT Operations"
+  },
+  {
+    "code": "ORG-CR-01",
+    "title": "TLS 1.2+ for all public endpoints",
+    "description": "All public-facing services terminate TLS 1.2 or higher. TLS 1.3 is preferred where client compatibility allows. Certificates are managed via cert-manager and rotated automatically 30 days before expiry. Internal service-to-service communication uses mutual TLS (mTLS). SSH connections use key-based authentication with minimum 2048-bit keys.",
+    "risk_domain": "Encryption",
+    "owner": "Platform Engineering"
+  },
+  {
+    "code": "ORG-CR-02",
+    "title": "Encryption at rest with managed keys",
+    "description": "All databases and object storage are encrypted at rest using AES-256 with cloud KMS-managed keys. Customer master keys are rotated annually and immediately after any suspected compromise. Key access is restricted to a minimum number of custodians with split-knowledge procedures. Encryption configuration is verified through automated compliance scans.",
+    "risk_domain": "Encryption",
+    "owner": "Platform Security"
+  },
+  {
+    "code": "ORG-LM-01",
+    "title": "Centralized logging with 18-month retention",
+    "description": "Application and infrastructure logs are forwarded to a central SIEM. Logs are retained for 18 months online and 36 months in cold storage. Log integrity is protected through immutable storage. The security team reviews alerts at least daily and conducts weekly log reviews. Detection rules cover brute-force attempts, privilege escalation, data exfiltration, and anomalous access patterns.",
+    "risk_domain": "Logging and Monitoring",
+    "owner": "Security Operations"
+  },
+  {
+    "code": "ORG-LM-02",
+    "title": "Audit logs for ePHI access",
+    "description": "All read and write access to systems containing ePHI is logged with user identification, timestamp, resource identifiers, and action performed. Logs are retained for 7 years per HIPAA requirements. Log integrity is ensured through write-once storage. Audit logs are reviewed weekly by the compliance team. Anomalous access patterns trigger automated alerts.",
+    "risk_domain": "Logging and Monitoring",
+    "owner": "Security Operations"
+  },
+  {
+    "code": "ORG-VM-01",
+    "title": "Vulnerability management SLA",
+    "description": "Vulnerability scanning is performed weekly for internet-facing assets and monthly for internal assets. Container images are scanned before deployment. Critical CVEs (CVSS >= 9.0) are patched within 14 days; high (CVSS 7.0-8.9) within 30 days; medium (CVSS 4.0-6.9) within 90 days. Exceptions require documented risk acceptance signed by the CISO. Tracked in the vulnerability management dashboard with automated SLA reporting.",
+    "risk_domain": "Vulnerability Management",
+    "owner": "Security Engineering"
+  },
+  {
+    "code": "ORG-IR-01",
+    "title": "Incident response plan and tabletop exercises",
+    "description": "Documented incident response plan covering detection, containment, eradication, recovery, and post-incident review. Severity levels (P1-P4) define escalation timelines. P1 incidents require executive notification within 1 hour. Post-incident reviews are completed within 5 business days. Annual tabletop exercise with engineering leadership. Lessons learned are incorporated into the response plan.",
+    "risk_domain": "Incident Response",
+    "owner": "Security Operations"
+  },
+  {
+    "code": "ORG-IR-02",
+    "title": "Breach notification process (72-hour)",
+    "description": "Documented breach notification workflow that engages legal within 4 hours and supervisory authorities within 72 hours of confirmed incident triage. Data subjects are notified without undue delay when the breach is likely to result in high risk to their rights and freedoms. Breach documentation includes nature, scope, likely consequences, and remedial measures taken. All breaches are logged regardless of notification requirement.",
+    "risk_domain": "Incident Response",
+    "owner": "Legal"
+  },
+  {
+    "code": "ORG-DR-01",
+    "title": "Annual disaster recovery test",
+    "description": "Production DR is exercised at least once per year by failing over the primary database to the secondary region. Pass criteria: RTO < 4h, RPO < 15m for critical systems. Test results are documented and reported to management. Identified deficiencies are tracked to remediation. Business impact analysis is reviewed annually.",
+    "risk_domain": "Business Continuity",
+    "owner": "Platform Engineering"
+  },
+  {
+    "code": "ORG-DR-02",
+    "title": "Encrypted daily backups with automated restore testing",
+    "description": "Daily encrypted backups of all primary data stores using AES-256 encryption. Backups are stored in a geographically separate location. Restorability is validated weekly via automated restore tests in a sandbox environment. Backup integrity is verified through checksums. Backup retention follows data classification policy (minimum 30 days for production data).",
+    "risk_domain": "Business Continuity",
+    "owner": "Platform Engineering"
+  },
+  {
+    "code": "ORG-DP-01",
+    "title": "Data retention policy and enforcement",
+    "description": "Per-data-class retention schedule documented in the data inventory. Retention rules are enforced at the storage layer with automated deletion upon expiry. Retention policies are reviewed annually by the DPO. Backup systems purge expired personal data within 180 days. Legal hold processes override standard retention when applicable.",
+    "risk_domain": "Data Protection",
+    "owner": "Data Protection Officer"
+  },
+  {
+    "code": "ORG-DP-02",
+    "title": "Data subject rights workflow",
+    "description": "Self-service portal and ticketing workflow to receive, validate, and execute data subject requests (access, erasure, rectification, portability) within 30 days. Requests are acknowledged within 72 hours. Identity verification is performed before fulfillment. Data is exported in JSON, CSV, or XML format for portability requests. All requests and outcomes are logged for audit purposes.",
+    "risk_domain": "Data Protection",
+    "owner": "Data Protection Officer"
+  },
+  {
+    "code": "ORG-DP-03",
+    "title": "Records of processing activities (RoPA)",
+    "description": "RoPA maintained in the GRC platform. Each processing activity record includes: controller/DPO contact details, processing purposes, data subject categories, personal data categories, recipients, international transfers, retention periods, and security measures. Each processing activity owner attests quarterly that the record is current. RoPA is made available to the supervisory authority on request.",
+    "risk_domain": "Data Protection",
+    "owner": "Data Protection Officer"
+  },
+  {
+    "code": "ORG-GO-01",
+    "title": "Code of conduct and ethics training",
+    "description": "All employees acknowledge the Code of Conduct on hire and complete an annual ethics refresher. Standards cover integrity, conflicts of interest, anti-bribery, and reporting obligations. Violations are investigated by HR with security involvement. Investigation results are tracked to closure. Adherence is evaluated during annual performance reviews.",
+    "risk_domain": "Governance",
+    "owner": "HR"
+  },
+  {
+    "code": "ORG-GO-02",
+    "title": "Security policy library and attestation",
+    "description": "Master security policy and supporting standards (acceptable use, data classification, remote work, BYOD) are published on the corporate intranet. Policies are reviewed annually and updated as needed. All employees re-attest on each major revision. Material policy changes are communicated within 10 business days.",
+    "risk_domain": "Governance",
+    "owner": "Compliance"
+  },
+  {
+    "code": "ORG-GO-03",
+    "title": "Vendor and business associate management",
+    "description": "All processors and business associates are onboarded through a vendor risk assessment including SOC 2 report review and security questionnaire. Contracts include data protection clauses, right to audit, incident notification requirements (72-hour SLA), and BAA where HIPAA applies. Critical vendors are reassessed annually. Sub-processor engagement requires prior written authorization.",
+    "risk_domain": "Vendor Management",
+    "owner": "Procurement"
+  },
+  {
+    "code": "ORG-AW-01",
+    "title": "Security awareness and training program",
+    "description": "All employees complete security awareness training within 30 days of hire and annually thereafter. Training covers phishing, password management, incident reporting, data handling, and social engineering. Phishing simulations run quarterly with targeted re-training for individuals who fail. Monthly security reminders are distributed via email covering current threat trends.",
+    "risk_domain": "Awareness and Training",
+    "owner": "Security Awareness"
+  },
+  {
+    "code": "ORG-CM-01",
+    "title": "Production change management process",
+    "description": "All production changes follow a documented change management process: change request with impact assessment, peer code review, automated CI/CD checks (unit tests, SAST, DAST), approval from at least one reviewer who is not the author, staged deployment, and post-deployment verification. High-risk changes require change advisory board (CAB) sign-off. Emergency changes require retrospective documentation within 48 hours.",
+    "risk_domain": "Change Management",
+    "owner": "Engineering"
+  },
+  {
+    "code": "ORG-CM-02",
+    "title": "Infrastructure-as-code and drift detection",
+    "description": "Production infrastructure is provisioned exclusively via Infrastructure-as-Code (Terraform/CloudFormation). Drift is detected nightly through automated compliance scans. Unauthorized changes are flagged for immediate review and remediation. All infrastructure changes go through the same code review and approval process as application changes.",
+    "risk_domain": "Change Management",
+    "owner": "Platform Engineering"
+  },
+  {
+    "code": "ORG-RA-01",
+    "title": "Annual enterprise risk assessment",
+    "description": "Cross-functional risk assessment performed annually using ISO 27005 methodology. Risks are scored on a 5x5 likelihood-impact matrix. Risk register is maintained in the GRC platform and reviewed quarterly. Assessment considers internal threats, external threat intelligence, vulnerability scan results, regulatory changes, and vendor risk. Findings are tracked to closure with defined remediation timelines.",
+    "risk_domain": "Risk Management",
+    "owner": "Compliance"
+  },
+  {
+    "code": "ORG-PH-01",
+    "title": "Physical access controls",
+    "description": "Office access requires badge and biometric verification where applicable. Visitor access requires escort and is logged. Data centers are operated by certified cloud providers (SOC 2 Type II); we review their audit reports annually. Physical access logs are retained for 12 months and reviewed quarterly for anomalies. Facility security plans include surveillance, environmental controls, and maintenance logging.",
+    "risk_domain": "Physical Security",
+    "owner": "Facilities"
+  },
+  {
+    "code": "ORG-DPIA-01",
+    "title": "DPIA process for high-risk processing",
+    "description": "Before launching new processing of personal data that is likely to result in high risk to data subjects (large-scale profiling, sensitive data, systematic monitoring), a Data Protection Impact Assessment is performed. The DPIA includes: systematic description of processing, necessity and proportionality assessment, risk assessment, and mitigation measures. The DPO is consulted. DPIAs are reviewed when processing operations change materially.",
+    "risk_domain": "Data Protection",
+    "owner": "Data Protection Officer"
+  }
+]

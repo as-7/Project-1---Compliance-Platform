@@ -1,0 +1,267 @@
+{
+  "name": "New Document Processing Pipeline",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ingest-regulatory-document",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "webhook-1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        260,
+        300
+      ],
+      "webhookId": "ingest-regulatory-document"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.BACKEND_BASE_URL || 'http://backend:8080'}}/api/documents",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 60000,
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "http-upload",
+      "name": "Upload to Backend",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        500,
+        300
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.error}}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "if-upload-failed",
+      "name": "Upload Failed?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        740,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.SLACK_WEBHOOK_URL}}",
+        "sendBody": true,
+        "contentType": "json",
+        "jsonBody": "={\"text\": \":x: Compliance ingestion FAILED for `{{$json.document.name || 'unknown'}}`.\\n```\\n{{$json.error}}\\n```\"}"
+      },
+      "id": "slack-fail",
+      "name": "Notify Slack: Failure",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        980,
+        180
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "amount": 8,
+        "unit": "seconds"
+      },
+      "id": "wait-extract",
+      "name": "Wait for Extraction",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        980,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{$env.BACKEND_BASE_URL || 'http://backend:8080'}}/api/controls/regulatory?document_id={{$node[\"Upload to Backend\"].json.document.id}}&limit=200",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "http-controls",
+      "name": "Fetch Extracted Controls",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1220,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{$env.BACKEND_BASE_URL || 'http://backend:8080'}}/api/gaps?document_id={{$node[\"Upload to Backend\"].json.document.id}}&status=MISSING",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "http-gaps",
+      "name": "Fetch MISSING Gaps",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1460,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const upload = $node[\"Upload to Backend\"].json;\nconst controls = $node[\"Fetch Extracted Controls\"].json.items || [];\nconst gaps = $items('Fetch MISSING Gaps').map(i => i.json) || [];\nconst critical = controls.filter(c => c.severity === 'CRITICAL' || c.severity === 'HIGH');\nconst missingCount = Array.isArray(gaps) ? gaps.length : 0;\nconst summary = {\n  document_id: upload.document.id,\n  document_name: upload.document.name,\n  controls_total: controls.length,\n  controls_high_or_critical: critical.length,\n  missing_gaps: missingCount,\n  has_critical_gaps: missingCount > 0 || critical.length > 0,\n};\nconst lines = [\n  `:satellite: Compliance ingestion COMPLETED for *${summary.document_name}*`,\n  `Controls extracted: *${summary.controls_total}* (HIGH/CRITICAL: ${summary.controls_high_or_critical})`,\n  `Missing gaps: *${summary.missing_gaps}*`,\n];\nif (summary.has_critical_gaps) {\n  lines.unshift(':rotating_light: *CRITICAL gap(s) detected*');\n}\nreturn [{ json: { summary, slack_text: lines.join('\\n') } }];"
+      },
+      "id": "build-summary",
+      "name": "Build Summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1700,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.SLACK_WEBHOOK_URL}}",
+        "sendBody": true,
+        "contentType": "json",
+        "jsonBody": "={\"text\": \"{{$json.slack_text}}\"}"
+      },
+      "id": "slack-success",
+      "name": "Notify Slack: Summary",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1940,
+        420
+      ],
+      "continueOnFail": true
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Upload to Backend",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload to Backend": {
+      "main": [
+        [
+          {
+            "node": "Upload Failed?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Failed?": {
+      "main": [
+        [
+          {
+            "node": "Notify Slack: Failure",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait for Extraction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait for Extraction": {
+      "main": [
+        [
+          {
+            "node": "Fetch Extracted Controls",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Extracted Controls": {
+      "main": [
+        [
+          {
+            "node": "Fetch MISSING Gaps",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch MISSING Gaps": {
+      "main": [
+        [
+          {
+            "node": "Build Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Summary": {
+      "main": [
+        [
+          {
+            "node": "Notify Slack: Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    {
+      "name": "compliance",
+      "createdAt": "2026-04-29T00:00:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+HIPAA SECURITY RULE — EXCERPT (ABRIDGED FOR DEMO)
+
+These excerpts paraphrase the HIPAA Security Rule (45 CFR §§ 164.302-318)
+and selected provisions of the HIPAA Privacy Rule for demonstration
+purposes only. They have been condensed and reorganized for testing the
+extraction pipeline. The authoritative text is published by the U.S.
+Department of Health and Human Services (HHS) at hhs.gov.
+
+================================================================================
+ADMINISTRATIVE SAFEGUARDS (§ 164.308)
+================================================================================
+
+§ 164.308(a)(1) — Security Management Process.
+
+Standard: Implement policies and procedures to prevent, detect, contain,
+and correct security violations.
+
+Implementation specifications:
+
+(i) Risk Analysis (Required). Conduct an accurate and thorough assessment
+of the potential risks and vulnerabilities to the confidentiality,
+integrity, and availability of electronic protected health information
+(ePHI) held by the covered entity or business associate. The risk analysis
+must be conducted at least annually, and whenever significant changes occur
+to the environment (e.g., new systems, new business processes, mergers, or
+regulatory changes). The risk analysis must identify all systems that
+create, receive, maintain, or transmit ePHI; identify and document
+reasonably anticipated threats and vulnerabilities; assess current security
+measures; determine the likelihood and impact of threat occurrence; and
+assign risk levels for all identified risks.
+
+(ii) Risk Management (Required). Implement security measures sufficient to
+reduce risks and vulnerabilities to a reasonable and appropriate level.
+Risk treatment plans must be documented and include timelines, responsible
+parties, and verification criteria. Residual risk must be formally accepted
+by an authorized official. Risk management activities must be reviewed
+quarterly to assess effectiveness and adjusted as needed.
+
+(iii) Sanction Policy (Required). Apply appropriate sanctions against
+workforce members who fail to comply with the security policies and
+procedures of the covered entity or business associate. The sanction
+policy must define a range of progressive disciplinary actions, from
+verbal warning to termination, based on the severity and frequency of
+the violation. The policy must be communicated to all workforce members
+during onboarding and annually thereafter. All sanctions applied must be
+documented in the workforce member's personnel record.
+
+(iv) Information System Activity Review (Required). Implement procedures to
+regularly review records of information system activity, such as audit
+logs, access reports, and security incident tracking reports. Reviews
+must be conducted at least weekly for systems containing ePHI. Anomalies
+and suspicious activities must be investigated and documented within
+48 hours of detection. Review results must be retained for at least
+six years.
+
+§ 164.308(a)(2) — Assigned Security Responsibility.
+
+Standard: Identify the security official who is responsible for the
+development and implementation of the policies and procedures required
+by this subpart for the covered entity or business associate. The
+security official (typically the CISO or equivalent) must have sufficient
+authority and resources to fulfill the role. The designation must be
+documented and communicated to the entire workforce. The security
+official's responsibilities include overseeing risk assessments, managing
+the security program, coordinating incident response, and ensuring
+compliance with all HIPAA security requirements.
+
+§ 164.308(a)(3) — Workforce Security.
+
+Standard: Implement policies and procedures to ensure that all members of
+the workforce have appropriate access to electronic protected health
+information (ePHI), and to prevent those workforce members who do not have
+access under the applicable section from obtaining access to ePHI.
+
+Implementation specifications:
+
+(i) Authorization and/or Supervision (Addressable). Implement procedures
+for the authorization and/or supervision of workforce members who work
+with ePHI or in locations where it might be accessed. All access to ePHI
+must be authorized by the workforce member's supervisor and the security
+official. Authorization must be documented and specify the scope of access
+granted, including which systems and what types of ePHI.
+
+(ii) Workforce Clearance Procedure (Addressable). Implement procedures to
+determine that the access of a workforce member to ePHI is appropriate.
+Clearance procedures include background checks (criminal history, credit
+checks for roles with financial access), verification of credentials and
+qualifications, and reference checks. Clearance must be completed before
+access is provisioned.
+
+(iii) Termination Procedures (Required). Implement procedures for
+terminating access to ePHI when the employment of, or other arrangement
+with, a workforce member ends, or when an entity determines that access
+is no longer needed. Access to ePHI must be revoked within 24 hours of
+separation for standard users and immediately for users with privileged
+or administrative access. All entity-owned devices and media must be
+recovered. Shared credentials known to the departing member must be
+changed within 24 hours.
+
+§ 164.308(a)(4) — Information Access Management.
+
+Standard: Implement policies and procedures for authorizing access to
+ePHI that are consistent with the applicable requirements of subpart E
+(the Privacy Rule).
+
+Implementation specifications:
+
+(i) Isolating Health Care Clearinghouse Functions (Required). If a health
+care clearinghouse is part of a larger organization, the clearinghouse
+must implement policies and procedures that protect ePHI from unauthorized
+access by the larger organization.
+
+(ii) Access Authorization (Addressable). Implement policies and procedures
+for granting access to ePHI, for example through access to a workstation,
+transaction, program, process, or other mechanism. Access authorization
+must be based on the principle of least privilege — workforce members
+receive only the minimum access necessary to perform their job functions.
+Role-based access control (RBAC) must be implemented where feasible.
+Access requests must include documented justification and manager approval.
+Privileged access requires additional approval from the security official.
+
+(iii) Access Establishment and Modification (Addressable). Implement
+policies and procedures that, based upon the entity's access authorization
+policies, establish, document, review, and modify a user's right of access
+to a workstation, transaction, program, or process. Access modifications
+must be documented with the date, requestor, approver, and specific access
+granted or revoked. Access reviews must be conducted at least quarterly for
+systems containing ePHI. Any unauthorized access discovered during review
+must be revoked immediately and investigated as a potential security
+incident.
+
+§ 164.308(a)(5) — Security Awareness and Training.
+
+Standard: Implement a security awareness and training program for all
+members of the workforce (including management).
+
+Implementation specifications:
+
+(i) Security Reminders (Addressable). Provide periodic security updates
+and reminders to the workforce. Reminders should be distributed at least
+monthly and cover current threat trends, phishing indicators, and policy
+updates. Reminders may be delivered via email, intranet postings, or
+digital signage.
+
+(ii) Protection from Malicious Software (Addressable). Implement
+procedures for guarding against, detecting, and reporting malicious
+software. All workforce members must be trained to recognize suspicious
+emails, links, and attachments. Reporting procedures for suspected
+malware must be documented and communicated.
+
+(iii) Log-in Monitoring (Addressable). Implement procedures for monitoring
+log-in attempts and reporting discrepancies. Failed login attempts must be
+logged and monitored. Alerts must be generated after five consecutive
+failed attempts. Repeated failed login patterns must be investigated.
+
+(iv) Password Management (Addressable). Implement procedures for creating,
+changing, and safeguarding passwords. Passwords must meet minimum
+complexity requirements: at least 12 characters, including upper and lower
+case letters, numbers, and special characters. Passwords must be changed
+at least every 90 days. Password reuse of the last 12 passwords is
+prohibited. Default passwords must be changed immediately upon deployment.
+
+§ 164.308(a)(6) — Security Incident Procedures.
+
+Standard: Implement policies and procedures to address security incidents.
+
+Implementation specification:
+
+(i) Response and Reporting (Required). Identify and respond to suspected
+or known security incidents; mitigate, to the extent practicable, harmful
+effects of security incidents that are known to the covered entity or
+business associate; and document security incidents and their outcomes.
+Security incidents must be classified by severity level (Critical, High,
+Medium, Low). Critical and High incidents require immediate notification
+to the security official and initiation of the incident response plan.
+Incident response includes: detection, analysis, containment, eradication,
+recovery, and post-incident review. Incident logs must be retained for at
+least six years and must include: date and time of detection, description
+of the incident, systems and data affected, response actions taken,
+personnel involved, and outcome. Post-incident reviews must be completed
+within 30 days of incident closure.
+
+§ 164.308(a)(7) — Contingency Plan.
+
+Standard: Establish (and implement as needed) policies and procedures for
+responding to an emergency or other occurrence (for example, fire,
+vandalism, system failure, and natural disaster) that damages systems that
+contain ePHI.
+
+Implementation specifications:
+
+(i) Data Backup Plan (Required). Establish and implement procedures to
+create and maintain retrievable exact copies of ePHI. Backups must be
+performed at least daily for critical systems. Backup integrity must be
+verified through automated validation checks. Backup media must be
+encrypted using AES-256 or equivalent. Off-site or cloud backup storage
+must be in a geographically separate location.
+
+(ii) Disaster Recovery Plan (Required). Establish (and implement as needed)
+procedures to restore any loss of data. The disaster recovery plan must
+define Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO)
+for each system containing ePHI. RTO for critical systems shall not exceed
+4 hours; RPO shall not exceed 1 hour. The plan must address scenarios
+including: complete site loss, partial infrastructure failure, data
+corruption, and ransomware.
+
+(iii) Emergency Mode Operation Plan (Required). Establish (and implement as
+needed) procedures to enable continuation of critical business processes
+for protection of the security of ePHI while operating in emergency mode.
+Emergency mode procedures must identify essential functions, alternative
+processing facilities, and manual procedures that can sustain operations
+until normal operations are restored.
+
+(iv) Testing and Revision Procedures (Addressable). Implement procedures
+for periodic testing and revision of contingency plans. Contingency plans
+must be tested at least annually through tabletop exercises, functional
+exercises, or full-scale tests. Test results must be documented and include
+identified deficiencies and corrective actions. Plans must be revised based
+on test results, actual incidents, organizational changes, and changes in
+the regulatory environment.
+
+(v) Applications and Data Criticality Analysis (Addressable). Assess the
+relative criticality of specific applications and data in support of other
+contingency plan components. The criticality analysis must identify and
+prioritize all applications and data that create, receive, maintain, or
+transmit ePHI. Business impact analysis must quantify the operational and
+financial impact of system downtime at various durations.
+
+§ 164.308(a)(8) — Evaluation.
+
+Standard: Perform a periodic technical and nontechnical evaluation, based
+initially upon the standards implemented under this rule and, subsequently,
+in response to environmental or operational changes affecting the security
+of ePHI, that establishes the extent to which a covered entity's or
+business associate's security policies and procedures meet the requirements
+of this subpart. Evaluations must be performed at least annually by
+qualified internal or external assessors. Evaluation results must be
+documented and deficiencies tracked to remediation.
+
+================================================================================
+PHYSICAL SAFEGUARDS (§ 164.310)
+================================================================================
+
+§ 164.310(a)(1) — Facility Access Controls.
+
+Standard: Implement policies and procedures to limit physical access to
+its electronic information systems and the facility or facilities in which
+they are housed, while ensuring that properly authorized access is allowed.
+
+Implementation specifications:
+
+(i) Contingency Operations (Addressable). Establish procedures for
+allowing facility access in support of restoration of lost data under the
+disaster recovery plan and emergency mode operations plan.
+
+(ii) Facility Security Plan (Addressable). Implement policies and
+procedures to safeguard the facility and the equipment therein from
+unauthorized physical access, tampering, and theft. The facility security
+plan must include perimeter security, access control mechanisms (badge,
+biometric, PIN), surveillance systems, visitor management procedures, and
+environmental controls (fire suppression, climate control, water detection).
+
+(iii) Access Control and Validation Procedures (Addressable). Implement
+procedures to control and validate a person's access to facilities based
+on their role or function. Physical access logs must be maintained and
+retained for at least six years. Access logs must be reviewed at least
+quarterly for anomalies.
+
+(iv) Maintenance Records (Addressable). Implement policies and procedures
+to document repairs and modifications to the physical components of a
+facility which are related to security. Maintenance logs must include the
+date, description of work, personnel involved, and any impact on security
+controls.
+
+§ 164.310(b) — Workstation Use.
+
+Standard: Implement policies and procedures that specify the proper
+functions to be performed, the manner in which those functions are to be
+performed, and the physical attributes of the surroundings of a specific
+workstation or class of workstation that can access ePHI. Workstation
+policies must address screen locking, clean desk requirements, and
+restrictions on accessing ePHI in public locations.
+
+§ 164.310(c) — Workstation Security.
+
+Standard: Implement physical safeguards for all workstations that access
+ePHI, to restrict access to authorized users. Physical safeguards include
+cable locks, secure office locations, and full-disk encryption on portable
+devices.
+
+§ 164.310(d) — Device and Media Controls.
+
+Standard: Implement policies and procedures that govern the receipt and
+removal of hardware and electronic media that contain ePHI into and out
+of a facility, and the movement of these items within the facility.
+Media disposal must follow NIST SP 800-88 guidelines. All disposed media
+must be accompanied by a certificate of destruction. Media reuse requires
+verified sanitization before redeployment.
+
+================================================================================
+TECHNICAL SAFEGUARDS (§ 164.312)
+================================================================================
+
+§ 164.312(a)(1) — Access Control.
+
+Standard: Implement technical policies and procedures for electronic
+information systems that maintain ePHI to allow access only to those
+persons or software programs that have been granted access rights as
+specified in § 164.308(a)(4).
+
+Implementation specifications:
+
+(i) Unique User Identification (Required). Assign a unique name and/or
+number for identifying and tracking user identity. Shared or group
+accounts are prohibited for systems containing ePHI. Each user must have
+a unique identifier that is linked to audit trail entries.
+
+(ii) Emergency Access Procedure (Required). Establish (and implement as
+needed) procedures for obtaining necessary ePHI during an emergency.
+Emergency access must be logged and reviewed within 24 hours. Emergency
+access credentials must be stored in a sealed, audited container (physical
+or virtual).
+
+(iii) Automatic Logoff (Addressable). Implement electronic procedures that
+terminate an electronic session after a predetermined time of inactivity.
+Clinical workstations must enforce automatic logoff after no more than
+15 minutes of inactivity. Administrative systems must enforce logoff after
+no more than 30 minutes. Logoff policies must be enforced via system
+configuration, not user discretion.
+
+(iv) Encryption and Decryption (Addressable). Implement a mechanism to
+encrypt and decrypt ePHI. Encryption must use FIPS 140-2 validated
+cryptographic modules. AES-256 is required for data at rest. TLS 1.2 or
+higher is required for data in transit.
+
+§ 164.312(b) — Audit Controls.
+
+Standard: Implement hardware, software, and/or procedural mechanisms that
+record and examine activity in information systems that contain or use
+ePHI. Audit logs must capture at minimum: user identification, type of
+event, date and time, success or failure indication, origination of event,
+and identity of affected data or system component. Audit logs must be
+retained for a minimum of six years. Audit log integrity must be protected
+through write-once storage, digital signatures, or hash chain verification.
+Logs must be reviewed at least weekly for security-relevant events. Alerts
+must be configured for high-risk events such as privilege escalation, bulk
+data access, and failed authentication attempts.
+
+§ 164.312(c) — Integrity.
+
+Standard: Implement policies and procedures to protect ePHI from improper
+alteration or destruction.
+
+Implementation specification:
+
+(i) Mechanism to Authenticate ePHI (Addressable). Implement electronic
+mechanisms to corroborate that ePHI has not been altered or destroyed in
+an unauthorized manner. Integrity controls include digital signatures,
+checksums, and version control for structured data. Database integrity
+is ensured through referential integrity constraints, transaction logging,
+and point-in-time recovery capabilities.
+
+§ 164.312(d) — Person or Entity Authentication.
+
+Standard: Implement procedures to verify that a person or entity seeking
+access to ePHI is the one claimed. Authentication mechanisms must include
+at least two of the following factors for access to ePHI: something you
+know (password, PIN), something you have (token, smart card), something
+you are (biometric). Multi-factor authentication is required for remote
+access to systems containing ePHI.
+
+§ 164.312(e) — Transmission Security.
+
+Standard: Implement technical security measures to guard against
+unauthorized access to ePHI that is being transmitted over an electronic
+communications network.
+
+Implementation specifications:
+
+(i) Integrity Controls (Addressable). Implement security measures to
+ensure that electronically transmitted ePHI is not improperly modified
+without detection until disposed of. Message integrity can be ensured
+through TLS, IPSec, or application-level message authentication codes.
+
+(ii) Encryption (Addressable). Implement a mechanism to encrypt ePHI
+whenever deemed appropriate. Encryption is required for all ePHI
+transmitted over public networks (internet, wireless). Encryption is
+strongly recommended for ePHI transmitted over internal networks,
+especially across trust boundaries. Minimum encryption standard is
+TLS 1.2 with strong cipher suites; TLS 1.3 is preferred.
+
+================================================================================
+ORGANIZATIONAL REQUIREMENTS (§ 164.314)
+================================================================================
+
+§ 164.314(a) — Business Associate Contracts or Other Arrangements.
+
+Standard: The contract or other arrangement between the covered entity and
+its business associate must meet the requirements of paragraphs (a)(2)(i)
+or (a)(2)(ii) as applicable.
+
+The business associate contract must provide that the business associate
+will: (a) implement administrative, physical, and technical safeguards that
+reasonably and appropriately protect the confidentiality, integrity, and
+availability of the ePHI it creates, receives, maintains, or transmits on
+behalf of the covered entity; (b) ensure that any subcontractors that
+create, receive, maintain, or transmit ePHI agree to the same restrictions
+and conditions; (c) report to the covered entity any security incident of
+which it becomes aware, including breaches of unsecured ePHI; (d) authorize
+termination of the contract by the covered entity if the business associate
+has violated a material term of the contract. Business associate agreements
+must be reviewed at least annually and updated when business operations or
+regulatory requirements change.
+
+§ 164.314(b) — Requirements for Group Health Plans.
+
+Standard: A group health plan must ensure that its plan documents provide
+that the plan sponsor will reasonably and appropriately safeguard ePHI.
+Plan documents must be amended to incorporate provisions requiring the
+plan sponsor to implement administrative, physical, and technical
+safeguards, report security incidents, and ensure that separation between
+the group health plan and the plan sponsor is maintained.
+
+================================================================================
+POLICIES, PROCEDURES, AND DOCUMENTATION (§ 164.316)
+================================================================================
+
+§ 164.316(a) — Policies and Procedures.
+
+Standard: Implement reasonable and appropriate policies and procedures to
+comply with the standards, implementation specifications, or other
+requirements of this subpart, taking into account the factors specified in
+§ 164.306(b). Policies must be written, approved by the security official,
+and reviewed at least annually or whenever significant changes occur.
+
+§ 164.316(b) — Documentation.
+
+Standard: (i) Maintain the policies and procedures implemented in written
+(which may be electronic) form. (ii) If an action, activity, or assessment
+is required to be documented, maintain a written (which may be electronic)
+record of the action, activity, or assessment. Documentation must be
+retained for a minimum of six years from the date of its creation or the
+date when it last was in effect, whichever is later. Documentation must
+be made available to those persons responsible for implementing the
+procedures to which the documentation pertains. Documentation must be
+reviewed periodically and updated as needed in response to environmental
+or operational changes.

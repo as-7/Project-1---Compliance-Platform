@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"/Users/aakashsehrawat/Desktop/Project 1 - Compliance\" init)",
+      "Read(//Users/aakashsehrawat/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/9ea335c0-3915-4e52-8be5-a710f9103af7/74fa4869-f03a-4efa-a636-2a73558e626e/skills/docx/**)",
+      "Bash(extract-text \"/Users/aakashsehrawat/Downloads/Pre Interview AI Evaluation.docx\")",
+      "Bash(pandoc \"/Users/aakashsehrawat/Downloads/Pre Interview AI Evaluation.docx\" -o /tmp/project1.md)",
+      "Read(//tmp/**)",
+      "Bash(docker --version)",
+      "Bash(docker compose *)",
+      "Bash(docker info *)",
+      "Bash(curl -sf http://localhost:8080/health)",
+      "Bash(curl -s http://localhost:8080/health)",
+      "Bash(curl -s http://localhost:8080/.well-known/agent.json)",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s http://localhost:8080/api/documents)",
+      "Bash(curl -s http://localhost:8080/api/gaps/summary)",
+      "Bash(docker exec *)",
+      "Bash(sed -n '260,280p' backend/app/agents/extraction_agent.py)",
+      "Bash(sed -n '158,180p' backend/app/agents/qa_agent.py)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5173/src/App.tsx)",
+      "Bash(lsof -nP -iTCP:5173 -sTCP:LISTEN)",
+      "Bash(lsof -nP -iTCP:8080 -sTCP:LISTEN)",
+      "Bash(ps -p 20244 -o pid,ppid,user,command)",
+      "Bash(awk '$4==\"cwd\"{print $NF}')",
+      "Bash(python3 -c \"import json,sys; docs=json.load\\(sys.stdin\\)['items']; [print\\(d['name'][:30], '|', d.get\\('error_message','-'\\)[:200]\\) for d in docs[:6]]\")",
+      "Bash(curl -N -s -X POST http://localhost:8080/api/chat/stream -H 'Content-Type: application/json' -d '{\"question\":\"What does the document say about access control?\"}' --max-time 90)",
+      "Bash(ps -p 20244 -o pid,user,command)",
+      "Bash(kill 20244)",
+      "Bash(python3 -c \"import json,sys; [print\\(d['name'][:40],'|', d['status'],'|',d.get\\('error_message',''\\)[:80] if d.get\\('error_message'\\) else ''\\) for d in json.load\\(sys.stdin\\)['items']]\")",
+      "Bash(python3 -c \"import json,sys; [print\\(d['status'],'|',d['name'][:50]\\) for d in json.load\\(sys.stdin\\)['items']]\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -N -s -X POST http://localhost:8080/api/chat/stream -H 'Content-Type: application/json' -d '{\"question\":\"What does GDPR say about data subject rights?\"}' --max-time 90)",
+      "Bash(curl -N -s -X POST http://localhost:8080/api/chat/stream -H 'Content-Type: application/json' -d '{\"question\":\"hi\"}' --max-time 180)",
+      "Bash(curl -s http://localhost:5173/src/pages/Chat.tsx)",
+      "Bash(curl -s \"http://localhost:5173/src/pages/Chat.tsx?v=$\\(date +%s\\)\")",
+      "Bash(python3 -c \"import json,sys; docs=json.load\\(sys.stdin\\)['items']; print\\(f'total={len\\(docs\\)}, ready={sum\\(1 for d in docs if d[\\\\\"status\\\\\"]==\\\\\"READY\\\\\"\\)}, failed={sum\\(1 for d in docs if d[\\\\\"status\\\\\"]==\\\\\"FAILED\\\\\"\\)}'\\)\")"
+    ]
+  }
+}
